@@ -82,7 +82,7 @@ class mysql::server::base {
 
   } else {
 
-    $mysql_password = generate("/usr/bin/pwgen", 20, 1)
+    $mysql_password = random_password(20)
 
     file { "/root/.my.cnf":
       owner => root,
