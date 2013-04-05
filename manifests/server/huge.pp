@@ -6,7 +6,6 @@ class mysql::server::huge inherits mysql::server::base {
 # MySQL.
   include mysql::config::performance::huge
   include mysql::config::mysqld
-  include mysql::config::replication
   include mysql::config::mysqld_safe
   include mysql::config::client
 }

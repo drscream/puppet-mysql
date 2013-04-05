@@ -8,7 +8,6 @@ class mysql::server::medium inherits mysql::server::base {
 
   include mysql::config::performance::medium
   include mysql::config::mysqld
-  include mysql::config::replication
   include mysql::config::mysqld_safe
   include mysql::config::client
 }

@@ -8,7 +8,6 @@ class mysql::server::small inherits mysql::server::base {
 
   include mysql::config::performance::small
   include mysql::config::mysqld
-  include mysql::config::replication
   include mysql::config::mysqld_safe
   include mysql::config::client
 }

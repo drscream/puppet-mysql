@@ -58,8 +58,7 @@ define mysql::config (
       $changes,
       "rm target[count(*)=0]",
       ],
-    require   => [ File["${mysql::params::mycnf}"],
-                   File["${mysql::params::data_dir}"] ],
-    notify    => Service["mysql"],
+    require   => [File["${mysql::params::mycnf}"], File["${mysql::params::data_dir}"] ],
+#    notify    => Service["mysql"],
   }
 }

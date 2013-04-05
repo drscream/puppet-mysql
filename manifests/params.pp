@@ -1,4 +1,9 @@
-class mysql::params {
+class mysql::params (
+	$mysql_data_dir = "",
+	$mysql_backupdir = "",
+	mysql_logfile_group = "",
+	mysql_password = undef,
+	) {
 
   $mycnf = $operatingsystem ? {
     /RedHat|Fedora|CentOS/ => "/etc/my.cnf",
